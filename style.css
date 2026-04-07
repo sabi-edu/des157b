@@ -1,0 +1,152 @@
+.pixelify-sans-<uniquifier> {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.suse-mono-<uniquifier> {
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* ------ */
+
+body {
+    background-color: rgb(216, 242, 255);
+}
+
+header h1 {
+    padding-top: 2px;
+    padding-left: 15px;
+    font-size: 2.1em;
+}
+
+h1, p, a, button {
+    font-family: "SUSE Mono", sans-serif;
+    color: rgb(23, 88, 168);
+}
+
+p, a, #name {
+    font-size: 1.2em;
+}
+
+main {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article {
+    background-color: rgb(194, 234, 255);
+    border: solid 3px rgb(23, 88, 168);;
+    border-radius: 10px;
+}
+
+.title-bar {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(152, 219, 254);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 0;
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.tb-btn {
+    position: relative;
+    top: 7px;
+    right: 7px;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(23, 88, 168);
+    border-radius: 5px;
+}
+
+#switch {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button {
+    margin: 10px;
+    background-color: rgb(194, 234, 255);
+    color: rgb(23, 88, 168);
+    border: solid 1px rgb(23, 88, 168);
+    border-radius: 5px;
+}
+
+article h1 {
+    font-size: 1.2em;
+    padding-left: 10px;
+    z-index: 1;
+}
+
+ul li {
+    background-color: rgb(194, 234, 255);
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    
+    #article-switch {
+        position: absolute;
+        top: 12%;
+        left: 73%;
+        z-index: 4;
+    }
+
+    #article-mini-studios {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        width: 400px;
+        height: 300px;
+        z-index: 1;
+    }
+
+    #article-mini-studios section {
+        display: flex;
+    }
+
+    #article-research {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        width: 315px;
+        z-index: -1;
+    }
+
+    #article-dev {
+        position: absolute;
+        top: 43%;
+        left: 57%;
+        width: 300px;
+        z-index: 2;
+    }
+
+    #article-capstone {
+        position: absolute;
+        top: 24%;
+        left: 17%;
+        width: 180px;
+        z-index: 3;
+    }
+
+    footer {
+        position: absolute;
+        right: 2%;
+        bottom: 1%;
+        text-align: right;
+    }
+
+}
