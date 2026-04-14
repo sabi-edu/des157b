@@ -12,17 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">`
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>Pampa</h1>
+        <p>Pampita</p>
+        <p>Pampuch</p>
+        <p>Pampuchi</p>
     </header>
-
-    <section id="overlay">
-        <img id="pampa-img" class="hidden" src="media/pampa.png" alt="Pampa cozy in bed">
-        <p id="blurb" class="hidden">Pampita is my baby :3</p>
-    </section>
     
     <video id="myVideo" muted loop autoplay playsinline>
         <source src="media/pampa.webm" type="video/webm">
@@ -33,46 +33,6 @@
     </video>
 
     <i class="fa-solid fa-expand"></i>
-
-    <script>
-        const overlay = document.querySelector('#overlay');
-        const pampaImg = document.querySelector('#pampa-img');
-        const blurb = document.querySelector('#blurb');
-        const intervalID = setInterval(checkTime, 1000);
-
-        // videoTime 
-
-        (function(){
-            'use strict';
-            console.log('reading js');
-
-            const fs = document.querySelector('.fa-expand')
-
-            fs.addEventListener('click', function(){
-
-                if(!document.fullscreenElement){
-                    document.documentElement.requestFullscreen();
-                } else {
-                    document.exitFullscreen();
-                }
-            });
-
-            function checkTime() {
-                if(1 < myVideo.currentTime && myVideo.currentTime < 3) {
-                    blurb.className = 'showing';
-                } else {
-                    blurb.className = 'hidden';
-                }
-
-                if(5 < myVideo.currentTime && myVideo.currentTime < 7) {
-                    pampaImg.className = 'showing';
-                } else {
-                    pampaImg.className = 'hidden';
-                }
-            }
-        })();
-
-    </script>
 
 </body>
 </html>

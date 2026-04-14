@@ -10,6 +10,11 @@ body {
     color: rgb(255, 194, 238);
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
 #overlay {
     position: absolute;
 }
