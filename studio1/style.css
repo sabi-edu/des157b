@@ -1,0 +1,65 @@
+.suse-mono-<uniquifier> {
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+    font-family: "SUSE Mono", sans-serif;
+    color: rgb(255, 194, 238);
+}
+
+#overlay {
+    position: absolute;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    z-index: 1;
+}
+
+#pampa-img {
+    bottom: 0%;
+    left: 0%;
+    z-index: 1;
+}
+
+#blurb {
+    bottom: 10%;
+    left: 10%;
+    z-index: 1;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: saturate(125%);
+    z-index: 0;
+}
+
+.fa-expand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: rgb(255, 194, 238);
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+    color: rgb(242, 149, 216)
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
