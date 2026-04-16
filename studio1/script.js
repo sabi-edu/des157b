@@ -13,6 +13,10 @@
     const pampaThought = [thought0, thought1, thought2, thought3, thought4, thought5];
     let counter = 0;
 
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('load-msg').innerHTML = 'HTML has loaded!'
+    });
+    
     fs.addEventListener('click', function(){
         if(!document.fullscreenElement){
             document.documentElement.requestFullscreen();
