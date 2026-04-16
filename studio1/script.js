@@ -1,18 +1,19 @@
-const overlay = document.querySelector('#overlay');
-const pampaImg = document.querySelector('#pampa-img');
-const blurb = document.querySelector('#blurb');
-const intervalID = setInterval(checkTime, 1000);
-
-// videoTime 
-
 (function(){
     'use strict';
     console.log('reading js');
 
-    const fs = document.querySelector('.fa-expand')
+    const fs = document.querySelector('.fa-expand');
+    const mainP = document.querySelectorAll('main p');
+    const thought0 = document.querySelector('#thought0');
+    const thought1 = document.querySelector('#thought1');
+    const thought2 = document.querySelector('#thought2');
+    const thought3 = document.querySelector('#thought3');
+    const thought4 = document.querySelector('#thought4');
+    const thought5 = document.querySelector('#thought5');
+    const pampaThought = [thought0, thought1, thought2, thought3, thought4, thought5];
+    let counter = 0;
 
     fs.addEventListener('click', function(){
-
         if(!document.fullscreenElement){
             document.documentElement.requestFullscreen();
         } else {
@@ -20,17 +21,18 @@ const intervalID = setInterval(checkTime, 1000);
         }
     });
 
-    function checkTime() {
-        if(1 < myVideo.currentTime && myVideo.currentTime < 3) {
-            blurb.className = 'showing';
-        } else {
-            blurb.className = 'hidden';
-        }
-
-        if(5 < myVideo.currentTime && myVideo.currentTime < 7) {
-            pampaImg.className = 'showing';
-        } else {
-            pampaImg.className = 'hidden';
-        }
+    for(const eachP of mainP){
+        eachP.addEventListener('click', function(){
+            for( let i=0; i< pampaThought.length; i++){
+                pampaThought[i].className = 'hidden';
+            }
+            pampaThought[counter].className = 'showing';
+            if(counter == pampaThought.length){
+                counter = 0;
+            }
+            else {
+                counter++;
+            }
+        });
     }
 })();
