@@ -10,11 +10,6 @@ body {
     color: rgb(255, 194, 238);
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-}
-
 #overlay {
     position: absolute;
 }
@@ -22,9 +17,10 @@ header {
 main p {
     font-size: 1.5em;
     position: absolute;
-    top: 80px;
+    bottom: 60px;
     right: 80px;
     max-width: 600px;
+    margin-left: 30px;
     cursor: pointer;
 }
 
@@ -40,10 +36,10 @@ main p {
     z-index: 1;
 }
 
-#myVideo {
+video {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    left: 0;
+    top: 0;
     min-width: 100%;
     min-height: 100%;
     filter: saturate(125%);
@@ -52,22 +48,9 @@ main p {
 
 footer {
     position: absolute;
-    bottom: 20px;
-    right: 70px;
+    bottom: 10px;
+    right: 50px;
     z-index: 1;
-}
-
-.fa-expand {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 36px;
-    color: rgb(255, 194, 238);
-}
-
-.fa-expand:hover {
-    cursor: pointer;
-    color: rgb(242, 149, 216)
 }
 
 .hidden {
@@ -76,4 +59,28 @@ footer {
 
 .showing {
     opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+    main p {
+        top: 80px;
+    }
+
+    .fa-expand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: rgb(255, 194, 238);
+}
+
+    .fa-expand:hover {
+        cursor: pointer;
+        color: rgb(242, 149, 216)
+    }
+
+    footer {
+        bottom: 20px;
+        right: 70px;
+    }
 }
