@@ -1,0 +1,1 @@
+/* have a div, in the div, each point represents a div, height of the div determined by # of hours, the mouse moves and shows a diferent number of data points, or clicking a div shows an img/desc */

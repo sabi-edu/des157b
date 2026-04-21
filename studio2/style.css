@@ -1,0 +1,124 @@
+.pixelify-sans-<uniquifier> {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+    background-color: rgb(66, 56, 70);
+    color: aliceblue;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+h1 {
+    /* background-color: rgb(255, 165, 249, .2); */
+    font-size: 2em;
+}
+
+h2 {
+    /* background-color: rgb(255, 165, 249, .2); */
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+header {
+    /* background-color: rgb(255, 165, 249, .2); */
+    display: flex;
+    flex-direction: column;
+}
+
+#key {
+    /* background-color: rgb(255, 165, 249, .2); */
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 2px solid aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+#keyVal {
+    /* background-color: rgb(255, 165, 249, .2); */
+    color: rgb(187, 154, 255);
+}
+
+#keyTerr {
+    /* background-color: rgb(255, 165, 249, .2); */
+    color: rgb(154, 246, 175);
+}
+
+#keyTomo {
+    /* background-color: rgb(255, 165, 249, .2); */
+    color: rgb(255, 165, 249);
+}
+
+#penguin {
+    /* background-color: rgb(255, 165, 249, .2); */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+main {
+    /* background-color: rgb(255, 165, 249, .2); */
+    display: flex;
+    gap: 5px;
+}
+
+#graph {
+    border-left: 3px solid aliceblue;
+    border-bottom: 3px solid aliceblue;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    gap: 4px;
+    padding-left: 5px;
+}
+
+#wk1, #wk2, #wk3, #wk4, #wk5, #wk6, #wk7, #wk8 {
+    position: relative;
+    background-color: rgb(192, 228, 255);
+    width: 1em;
+}
+
+#wk1, #wk2, #wk3 {
+    height: 1px;
+}
+
+#wk4 {
+    height: 16px;
+}
+
+#wk5 {
+    height: 29px;
+}
+
+#wk6 {
+    height: 19px;
+}
+
+#wk7 {
+    height: 21px;
+}
+
+#wk8 {
+    height: 42px;
+}
+
+#y-axis {
+    /* background-color: rgb(255, 165, 249, .2); */
+    position: relative;
+    left: 40px;
+    rotate: -90deg;
+    text-align: center;
+}
+
+#x-axis {
+    /* background-color: rgb(255, 165, 249, .2); */
+    position: relative;
+    top: 310px;
+    right: 350px;
+}
