@@ -8,39 +8,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=SUSE" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/74d06b2fdb.js" crossorigin="anonymous"></script>
+
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>p4inguin4's Gaming Habits</h1>
         <h2><em>Over the course of 8 weeks</em></h2>
+        <p id="info">"Click on each week to see details" <br><em>-Linux Penguin, imaginary sponsor of p4inguin4</em></p>
     </header>
 
-    <section id="key">
-        <p id="keyTotal">Total</p>
-        <p id="keyVal">Valorant</p>
-        <p id="keyTerr">Terraria</p>
-        <p id="keyTomo">Tomodachi Life</p>
-    </section>
-
     <section id="penguin">
-        <p><em>[penguin animation here]</em></p>
+        <i class="fa-brands fa-linux"></i>
     </section>
 
     <main>
-        <h2 id="y-axis">Hours Spent Gaming</h2>
+        <section id="key">
+            <p id="key-total">Total - <i class="fa-solid fa-square"></i></p>
+            <p id="key-val">Valorant - <i class="fa-solid fa-square"></i></p>
+            <p id="key-terr">Terraria - <i class="fa-solid fa-square"></i></p>
+            <p id="key-tomo">Tomodachi Life - <i class="fa-solid fa-square"></i></p>
+        </section>
 
         <section id="graph">
-            <div id="wk1"></div>
-            <div id="wk2"></div>
-            <div id="wk3"></div>
-            <div id="wk4"></div>
-            <div id="wk5"></div>
-            <div id="wk6"></div>
-            <div id="wk7"></div>
-            <div id="wk8"></div>
+            <h2 id="y-axis">Hours Spent Gaming</h2>
+
+            <div id="axis">
+                <section id="data">
+                    <div id="wk1"></div>
+                    <div id="wk2"></div>
+                    <div id="wk3"></div>
+                    <div id="wk4"></div>
+                    <div id="wk5"></div>
+                    <div id="wk6"></div>
+                    <div id="wk7"></div>
+                    <div id="wk8"></div>
+                </section>
+            </div>
+            
+            <h2 id="x-axis">Weeks</h2>
         </section>
-        
-        <h2 id="x-axis">Weeks</h2>
     </main>
 </body>
 </html>

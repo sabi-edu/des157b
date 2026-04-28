@@ -5,120 +5,140 @@
   font-style: normal;
 }
 
+/* ---- BODY ---- */
 body {
     background-color: rgb(66, 56, 70);
-    color: aliceblue;
+    color: white;
     font-family: "Pixelify Sans", sans-serif;
 }
 
-h1 {
-    /* background-color: rgb(255, 165, 249, .2); */
-    font-size: 2em;
-}
-
-h2 {
-    /* background-color: rgb(255, 165, 249, .2); */
-    font-size: 1.5em;
-}
-
-p {
-    font-size: 1.2em;
-}
-
+/* ---- HEADER ---- */
 header {
     /* background-color: rgb(255, 165, 249, .2); */
+    position: relative;
+    left: 20px;
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
+    margin-left: 10px;
+
+}
+h1 {
+    font-size: 2.5em;
+    position: relative;
+    left: 10px;
+    margin: auto;
+    margin-left: 0px;
+}
+header h2 {
+    font-size: 1.5em;
+    position: relative;
+    left: 10px;
+    margin: auto;
+    margin-top: 3px;
+    margin-left: 1px;
 }
 
-#key {
-    /* background-color: rgb(255, 165, 249, .2); */
-    margin-bottom: 20px;
-    padding-left: 10px;
-    border: 2px solid aliceblue;
-    display: flex;
-    flex-direction: column;
-}
-
-#keyVal {
-    /* background-color: rgb(255, 165, 249, .2); */
-    color: rgb(187, 154, 255);
-}
-
-#keyTerr {
-    /* background-color: rgb(255, 165, 249, .2); */
-    color: rgb(154, 246, 175);
-}
-
-#keyTomo {
-    /* background-color: rgb(255, 165, 249, .2); */
-    color: rgb(255, 165, 249);
+#info {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    text-align: right;
 }
 
 #penguin {
     /* background-color: rgb(255, 165, 249, .2); */
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 60px;
+    font-size: 12em;
 }
 
+/* ----  MAIN ---- */
 main {
     /* background-color: rgb(255, 165, 249, .2); */
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+}
+p {
+    font-size: 1.2em;
+}
+.fa-solid fa-square {
+    background-color: white;
 }
 
-#graph {
-    border-left: 3px solid aliceblue;
-    border-bottom: 3px solid aliceblue;
-    width: 600px;
-    height: 300px;
+/* -- KEY -- */
+#key {
+    /* background-color: rgb(255, 165, 249, .2); */
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     display: flex;
-    gap: 4px;
-    padding-left: 5px;
+    flex-direction: column;
+}
+#key-total, #key-val, #key-terr, #key-tomo {
+    margin: auto;
+    margin-left: 5px;
+}
+#key-val {
+    /* background-color: rgb(255, 165, 249, .2); */
+    color: rgb(187, 154, 255);
+}
+#key-terr {
+    /* background-color: rgb(255, 165, 249, .2); */
+    color: rgb(154, 246, 175);
+}
+#key-tomo {
+    /* background-color: rgb(255, 165, 249, .2); */
+    color: rgb(255, 165, 249);
 }
 
-#wk1, #wk2, #wk3, #wk4, #wk5, #wk6, #wk7, #wk8 {
-    position: relative;
-    background-color: rgb(192, 228, 255);
-    width: 1em;
+/* -- GRAPH -- */
+#graph {
+    /* background-color: rgb(255, 165, 249, .2); */
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
 }
-
-#wk1, #wk2, #wk3 {
-    height: 1px;
-}
-
-#wk4 {
-    height: 16px;
-}
-
-#wk5 {
-    height: 29px;
-}
-
-#wk6 {
-    height: 19px;
-}
-
-#wk7 {
-    height: 21px;
-}
-
-#wk8 {
-    height: 42px;
-}
-
 #y-axis {
     /* background-color: rgb(255, 165, 249, .2); */
-    position: relative;
-    left: 40px;
-    rotate: -90deg;
-    text-align: center;
+    text-overflow: ellipsis;
+    margin: auto;
 }
-
 #x-axis {
     /* background-color: rgb(255, 165, 249, .2); */
     position: relative;
-    top: 310px;
-    right: 350px;
+    top: 200px;
+    right: 50%;
+    margin: auto;
+}
+#axis {
+    width: 610px;
+    height: 300px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    gap: 4px;
+}
+#data {
+    /* background-color: rgb(255, 165, 249, .2); */
+    margin: auto;
+    margin-bottom: 0;
+    display: flex;
+    gap: 4px;
+}
+#wk1, #wk2, #wk3, #wk4, #wk5, #wk6, #wk7, #wk8 {
+    width: 4.5em;
+    background-color: white;
+    border-radius: 2px;
+    margin: auto;
+    margin-bottom: 0;
 }
