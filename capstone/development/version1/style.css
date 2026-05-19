@@ -10,9 +10,15 @@ p, #input, #submit {
     font-size: 1.3em;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #prompt {
     margin-top: 30px;
     margin-left: 15px;
+    max-width: 50%;
 }
 
 form {
@@ -64,10 +70,23 @@ form {
     opacity: 100;
 }
 
+footer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 @media screen and (min-width: 480px) {
 
     p, #input, #submit {
         font-size: 1.2em;
+    }
+
+    #prompt {
+        margin-top: 30px;
+        margin-left: 15px;
+        max-width: 100%;
     }
     
     form {
@@ -81,6 +100,10 @@ form {
 
     #flower {
         width: 30%;
+    }
+
+    footer {
+        margin-top: 60%;
     }
 
 }

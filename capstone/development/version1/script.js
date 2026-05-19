@@ -4,8 +4,8 @@
 
     // -- DECLARATIONS --
 
-    Parse.initialize(" a6pzQPpxFzS7IapoZ5Rvv58hhxkKukjU5joOpeW9", "K18tL22stikioAUdbpnviSH02S2FYeVWwKig28NX"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    Parse.serverURL = "https://parseapi.back4app.com/";
+    // Parse.initialize(" a6pzQPpxFzS7IapoZ5Rvv58hhxkKukjU5joOpeW9", "K18tL22stikioAUdbpnviSH02S2FYeVWwKig28NX"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    // Parse.serverURL = "https://parseapi.back4app.com/";
 
     const granimInstance = new Granim({
         element: '#granim-canvas',
