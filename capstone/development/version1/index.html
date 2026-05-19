@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She loves me not; she loves me.</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+
+    <script src="granim.min.js" defer ></script>
+
+    <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <canvas id="granim-canvas" class="hidden"></canvas>
+
+    <p id="prompt" >Send a message to a younger self.</p>
+    
+    <form data-parsley-validate target="_self">
+        <input type="text" id="input" required>
+        <input type="submit" id="submit">
+    </form>
+
+    <main class="hidden">
+        <div id="draggable" class="response">
+            <p id="response-area"></p>
+            <img class="petal" src="media/petal.png" alt="Pink flower petal">
+        </div>
+    </main>
+
+    <img id="flower" class="hidden" src="media/flower.png" alt="Pink flower">
+
+</body>
+</html>
