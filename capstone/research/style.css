@@ -15,13 +15,27 @@ header {
     margin-left: 10px;
 }
 
-h1, h2, p, a {
+h1, h2, h3, p, a, li {
     font-family: "SUSE Mono", sans-serif;
     color: rgb(23, 88, 168);
 }
 
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
 p {
     font-size: 1.2em;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 main {
