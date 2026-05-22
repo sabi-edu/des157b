@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // DEFINED, NAMED FUNCTION
+        // function makeUpperCase(aString) {
+        //     return aString.toUpperCase();
+        // }
+
+        // CONVERT TO FUNCTION EXPRESSION
+        // const makeUpperCase = function(aString) {
+        //     return aString.toUpperCase();
+        // }
+
+        // CONVERT TO ARROW FUNCTION
+        // const makeUpperCase = (aString) => {
+        //     return aString.toUpperCase();
+        // }
+
+        // REMOVE PARENTHESES IF ONLY ONE PARAMETER PASSED INTO FUNCTION
+        // const makeUpperCase = aString => {
+        //     return aString.toUpperCase();
+        // }
+
+
+        // REMOVE CURLY BRACES AND "RETURN" KEYWORD IF FUNCTION CONTAINS ONLY 1 STATEMENT AND THE FUNCTION RETURNS A VALUE
+        
+        const makeUpperCase = aString => aString.toUpperCase();
+
+        console.log(makeUpperCase('here is a string'));
+
+        // Above we have a variable called "makeUpperCase", assigned to a function that takes "aString" as a parameter, to which is applied "toUpperCase()", and returned is the string in uppercase format.
+
+
+    // ------------- 
+
+
+        // IF MORE THAN ONE PARAMETER, USE PARENTHESES
+        // THIS ARROW FUNCTION TAKES 2 PARAMETERS AND RETURNS
+        // const fullName = (fname, lname) => `${fname} ${lname}`;
+
+        // IF ZERO PARAMETERS AND >1 LINE IN THE FUNCTION OR IF IT'S NOT RETURNING A VARIABLE, USE PARENTHESES
+        const fullName = () => {
+            const fname = 'Maria';
+            const lname = "Sanchez";
+            return `${fname} ${lname}`;
+        }
+        console.log(fullName('Jose', 'Gonzalez'));
+
+
+        // ----
+
+        // ARROW FUNCTIONS ARE GOOD WHEN YOU HAVE A FUNCTION THAT TAKES ANOTHER FUNCTION AS A PARAMETER
+        const fruit = ['banana', 'apple', 'lemon', 'kiwi'];
+        const upperFruit = [];
+
+        // fruit.forEach(function(thisFruit){
+        //     upperFruit.push(thisFruit.toUpperCase());
+        // });
+
+        fruit.forEach( thisFruit => {
+            upperFruit.push(thisFruit.toUpperCase());
+        });
+
+        console.log(upperFruit);
+
+
+        // -----------
+
+        const employee = function(fname, lname, jobTitle){
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            this.fullName = () => `${fname} ${lname}`;
+
+        const id1234 = new employee('Bob', 'Smith', 'Mechanic');
+
+        console.log(id1234.fname);
+        console.log(id1234.fullName());
+
+    </script>
+
+</body>
+</html>
