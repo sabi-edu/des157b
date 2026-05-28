@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I feel okay in my body now.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="granim.min.js" defer ></script>
+    <script src="parsley.js" defer></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <canvas id="granim-canvas" class="hidden"></canvas>
+
+    <p id="prompt">Send a message to a younger self.</p>
+    
+    <form>
+        <input type="text" id="input" required>
+        <input type="submit" id="submit">
+    </form>
+
+    <main class="hidden">
+        <p id="response-area"></p>
+    </main>
+
+    <img id="flower" class="hidden" src="media/flower.png" alt="Pink flower">
+
+    <footer>
+        <p><a href="https://sarcadass.github.io/granim.js/"><u>Granim</u> | </a></p>
+        <p><a href="https://jquery.com/"><u>JQuery</u></a></p>
+    </footer>
+
+</body>
+</html>
