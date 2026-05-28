@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I feel okay in my body now.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <canvas id="granim-canvas" class="hidden"></canvas>
+
+    <section id="overlay" class="showing">
+        <article>
+            <h1>Hello there :)</h1>
+            <p>Thanks for testing out this site!</p>
+            <p>Please do the following to the best of your abilities:</p>
+            <ol>
+                <li><em>Submit a query in response to the prompt.</em></li>
+                <li><em>Read the content on the following page.</em></li>
+                <li><em>Take into consideration any thoughts or feelings that arise during this process.</em></li>
+            </ol>
+            <button id="close-btn">Close</button>
+        </article>
+    </section>
+
+    <p id="prompt">Send a message to a younger self.</p>
+    
+    <form>
+        <input type="text" id="input" required>
+        <input type="submit" id="submit">
+    </form>
+
+    <main class="hidden">
+
+        <section  id="letter">
+            <p id="greeting"><em>Dear younger me,</em></p>
+
+            <!-- Sample messages included for user-testing purposes -->
+            <p id="message">I've realized that life is too short to focus on what our body looks like and not what it does. I carry around a picture of you to remind myself who I'm talking about when I talk about myself, since you deserve only loving words. I'm so proud of you. </p>
+            
+            <div id="signature">
+                <p><em>Love,</em></p>
+                <p><em>Older you</em></p>
+            </div>
+        </section>
+
+    </main>
+
+    <img id="flower" class="hidden" src="media/flower.png" alt="Pink flower">
+
+    <footer>
+        <p><a href="https://sarcadass.github.io/granim.js/"><u>Granim</u> | </a></p>
+        <p><a href="https://jquery.com/"><u>JQuery</u></a></p>
+    </footer>
+
+</body>
+</html>
