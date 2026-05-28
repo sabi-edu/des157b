@@ -2,9 +2,6 @@
     'use strict';
     console.log('reading js');
 
-    Parse.initialize("1QKtkn4q7gLaOTJdxXdissUxzPOkC13MvZYHlQan", "bJyiDdLnA39prJznScm3eLr1fosjvSUxv1Q0frrD");
-    Parse.serverURL = 'https://parseapi.back4app.com';
-
     const overlay = document.querySelector('#overlay')
     const closeBtn = document.querySelector('#close-btn')
     const form = document.querySelector('form');
@@ -23,7 +20,6 @@
             overlay.className = 'hidden';
         }
     });
-
 
 
     submitBtn.addEventListener('click', function(event) {
