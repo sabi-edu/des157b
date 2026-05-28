@@ -1,10 +1,3 @@
-.pixelify-sans-<uniquifier> {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
 .suse-mono-<uniquifier> {
   font-family: "SUSE Mono", sans-serif;
   font-optical-sizing: auto;
@@ -128,7 +121,7 @@ ul li {
 
     #article-dev {
         position: absolute;
-        top: 43%;
+        top: 50%;
         left: 57%;
         width: 300px;
         z-index: 2;
