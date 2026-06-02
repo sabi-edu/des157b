@@ -7,6 +7,7 @@
     Parse.initialize("aRigWJwTKEwQhW1MZ6bHR9XLBK6tHjZohkCkQams", "ah8cx6k6LMkAZ990ISgvzt0jHwc6IArghW9mrcPl"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
     Parse.serverURL = "https://parseapi.back4app.com/";
 
+    const friendList = document.querySelector('#friend-list');
     const newBtn = document.querySelector('#newbtn');
     const editBtns = document.querySelectorAll('.fa-edit');
     const addFriendForm = document.querySelector('#add-friend');

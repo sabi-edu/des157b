@@ -1,0 +1,144 @@
+#granim-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+}
+
+h1, p, ul li, #close-btn, #input, #submit {
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color:#fff;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form {
+    margin-top: 140%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#input {
+    border: 1px solid rgb(223, 223, 223) ;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+#submit {
+    min-height: 40px;
+    max-width: 80%;
+}
+
+#letter {
+    margin: auto;
+    padding: 20px;
+    border: solid 2px rgb(72, 72, 72);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    min-width: 30vw;
+    max-width: 60vw;
+    min-height: 60vh;
+}
+
+#greeting {
+    position: relative;
+    left: 5%;
+}
+
+#message {
+    position: relative;
+    left: 15%;
+    max-width: 400px;
+}
+
+#signature {
+    position: relative;
+    right: 10%;
+    text-align: right;
+}
+
+#flower {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+}
+
+footer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 480px) {
+
+    p, #input, #submit {
+        font-size: 1.2em;
+    }
+    
+    form {
+        margin: 20% 0 0 10%;
+        flex-direction: row;
+    }
+
+    #input {
+        min-width: 65%;
+    }
+
+    #flower {
+        width: 30%;
+    }
+
+    footer {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 50%;
+    }
+
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    display: block;
+    visibility: visible;
+    opacity: 100;
+}
