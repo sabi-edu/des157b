@@ -28,28 +28,23 @@
     <p id="prompt">Send a message to a younger self.</p>
     
     <form>
-        <label for="email">Email</label>
-        <input type="email" id="email" class="data" required>
-        <label for="message">Message</label>
-        <textarea cols="50" rows="10" id="message"></textarea>
-        <input type="submit" value="send" id="submit-btn">
+        <input type="text" id="email" required>
+        <input type="text" id="message" required>
+        <input type="submit" id="submit">
     </form>
 
     <main class="hidden">
 
-        <section  id="letters">
+        <section  id="letter">
+            <p id="greeting"><em>Dear younger me,</em></p>
 
-            <article>
-                <header><p id="greeting"><em>Dear younger me,</em></p></header>
-
-                <p></p>
-
-                <footer id="signature">
-                    <p><em>Love,</em></p>
-                    <p><em>Older you</em></p>
-                </footer>
-            </article>
+            <!-- Sample messages included for user-testing purposes -->
+            <p id="message">I've realized that life is too short to focus on what our body looks like and not what it does. I carry around a picture of you to remind myself who I'm talking about when I talk about myself, since you deserve only loving words. I'm so proud of you. </p>
             
+            <div id="signature">
+                <p><em>Love,</em></p>
+                <p><em>Older you</em></p>
+            </div>
         </section>
 
     </main>

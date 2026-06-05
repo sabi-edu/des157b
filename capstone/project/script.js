@@ -7,73 +7,13 @@
 
     const overlay = document.querySelector('#overlay')
     const closeBtn = document.querySelector('#close-btn')
-    const form = document.querySelector('form');
-    const input = document.querySelector('#input')
-    const submitBtn = document.querySelector('#submit')
-    const msg = document.querySelector('#message');
+    const myForm = document.querySelector('form');
+    let user;
+    let html = '';
+    const submitBtn = document.querySelector('#submit-btn');
+    const letters = document.querySelector('#letters');   
     
-
-    // 2 fields
-
     
-    // Creating objects
-    (async () => {
-        const myNewObject = new Parse.Object('Entry');
-        myNewObject.set('message', 'A string');
-        
-        try {
-            const result = await myNewObject.save();
-            // Access the Parse Object attributes using the .GET method
-            console.log('Entry created', result);
-        } catch (error) {
-            console.error('Error while creating Entry: ', error);
-        }
-    })();
-
-
-    // Reading objects
-    (async () => {
-        const Entry = Parse.Object.extend('Entry');
-        const query = new Parse.Query(Entry);
-
-        try {
-            const results = await query.find();
-            for (const object of results) {
-            // Access the Parse Object attributes using the .GET method
-            const message = object.get('message')
-            console.log(message);
-            }
-        } catch (error) {
-            console.error('Error while fetching Entry', error);
-        }
-    })();
-
-
-    // Updating objects
-    (async () => {
-        const query = new Parse.Query(Entry);
-        
-        try {
-            // here you put the objectId that you want to update
-            const object = await query.get('xKue915KBG');
-            object.set('message', 'A string');
-            
-            try {
-            const response = await object.save();
-            // You can use the "get" method to get the value of an attribute
-            // Ex: response.get("<ATTRIBUTE_NAME>")
-            // Access the Parse Object attributes using the .GET method
-            console.log(response.get('message'));
-            console.log('Entry updated', response);
-            } catch (error) {
-            console.error('Error while updating Entry', error);
-            }
-            } catch (error) {
-            console.error('Error while retrieving object Entry', error);
-        }
-    })();
-
-
     closeBtn.addEventListener('click', function(event){
         event.preventDefault();
         overlay.className = 'hidden';
@@ -85,14 +25,55 @@
         }
     });
 
-    submitBtn.addEventListener('click', function(event) {
+
+    myForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        var value = input.value;
 
-    });
+        addRecord();
+        pageSwitch();
+    })
 
+
+    async function addRecord() {
+        const emailData = document.querySelector('#email');
+        const commentData = document.querySelector('#comments');
+        const newObject = new Parse.Object('Letters');
+
+        user = emailData.ariaValueMax;
+        newObject.set('email', emailData.value);
+        newObject.set('comment', commentData.value);
+        
+        try {
+            const result = await newObject.save();
+            emailData.value = '';
+            commentData.value = '';
+            getLetters();
+        } catch(error) {
+            console.error('Error while creating ParseObject: ', error);
+        }
+    }
+
+    async function getLetters() {
+        const query = new Parse.Query('Letters');
+        query.equalTo('email', user);
+        query.descending('createdAt');
+
+        try {
+            const results = await query.find();
+            for (const object of results) {
+                const thisEmail = object.get('email');
+                const thisComment = object.get('comment');
+                html += `<article><p>${thisComment} from ${thisEmail}</p></article>`;
+            }
+            letters.innerHTML = html;
+        } catch(error) {
+            console.error('Error while fetching Letters', error)
+        }
+    } 
+
+    
     function pageSwitch () {
-        form.remove();
+        myForm.remove();
         $('#prompt').addClass('hidden');
         $('#granim-canvas').removeClass('hidden').addClass('showing');
         $('main').removeClass('hidden').addClass('showing');
