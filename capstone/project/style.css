@@ -72,10 +72,9 @@ ul {
 }
 
 #close-btn:hover {
-    background-color: white;
-    color: #ff9efa;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #ff91fa;
 }
-
 
 /* --- HEADER --- */
 
@@ -90,7 +89,6 @@ ul {
 
 #info-btn:hover {
     transform: scale(1.02);
-    color: 0 0 20px white;
 }
 
 header {
@@ -103,11 +101,17 @@ header {
 
 #form-flower {
     position: absolute;
-    top: 350px;
-    left: 31px;
-    width: 50%;
+    top: 0;
+    left: 0;
+    width: 190px;
     z-index: -99;
     opacity: .3;
+    rotate: 90deg;
+}
+
+#form-flower:hover {
+    transform: scale(1.02);
+    opacity: .5;
 }
 
 form {
@@ -119,7 +123,8 @@ form {
 }
 
 #message {
-    padding: 5px;
+    min-width: 320px;
+    padding: 10px;
     background-color: rgb(252, 252, 252, 0);
     border: 1px solid #ffcafc;
     border-radius: 3px;
@@ -190,11 +195,11 @@ main article {
 
 #back-btn {
     position: absolute;
-    right: 7px;
+    right: 9px;
     bottom: 12px;
     padding: 5px 5px 5px 10px;
-    border: 1px solid #ff91fa;
-    border-radius: 2px;
+    border: 2px solid #ff91fa;
+    border-radius: 3px;
     background-color: white;
     color: #ff9efa;
     transition-duration: 0.3s;
@@ -218,6 +223,11 @@ main article {
     opacity: .7;
 }
 
+#letter-flower1:hover {
+    transform: scale(1.02);
+    opacity: .9;
+}
+
 #letter-flower2 {
     position: absolute;
     left: 0;
@@ -225,6 +235,11 @@ main article {
     width: 50%;
     z-index: -99;
     opacity: .7;
+}
+
+#letter-flower2:hover {
+    transform: scale(1.02);
+    opacity: .9;
 }
 
 footer {
@@ -250,6 +265,10 @@ footer {
     color: #fc72f5;
 }
 
+.pink:hover {
+    transform: scale(1.06);
+}
+
 .hidden {
     display: none;
     visibility: hidden;
@@ -268,6 +287,8 @@ footer {
     }
     
     #overlay article {
+        top: 15%;
+        left: 20%;
         min-width: 300px;
         max-width: 700px;
         padding: 30px 50px 30px 50px;
@@ -288,24 +309,18 @@ footer {
 
     #form-flower {
         position: absolute;
-        top: 0;
-        left: 0;
         width: 20%;
-        z-index: -99;
-        opacity: .3;
-        rotate: 90deg;
     }
 
     form {
         max-width: 555px;
-        margin: 44px 0 0 299px;
+        margin-top: 44px;
         padding: 2px 22px 22px 22px;
         background-color: rgb(255, 208, 253, .2);
         border-radius: 6px;
     }
 
     #message {
-        padding: 9px;
         background-color: rgb(252, 252, 252);
         border: 1px solid #ffcafc;
         border-radius: 3px;
@@ -336,7 +351,6 @@ footer {
 
     #back-btn {
         right: 44px;
-        border: 2px solid #ff91fa;
     }
 
     #letter-flower1 {
