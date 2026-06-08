@@ -32,11 +32,6 @@
         overlay.className = 'hidden';
     });
 
-    !overlay.addEventListener('click', function(event){
-        event.preventDefault();
-        overlay.className = 'hidden';
-    });
-
     document.addEventListener('keydown', function(event){
         if (event.key === 'Escape') {
             overlay.className = 'hidden';

@@ -76,6 +76,17 @@ ul {
     box-shadow: 0 0 20px #ff91fa;
 }
 
+#watermark {
+    font-size: 14px;
+    display: block;
+    margin: auto;
+    transition-duration: ;
+}
+
+#watermark:hover {
+    color: #ff9efa;
+}
+
 /* --- HEADER --- */
 
 #info-btn {

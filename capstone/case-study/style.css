@@ -1,0 +1,61 @@
+.suse-mono-<uniquifier> {
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* ------ */
+
+body {
+    background-color: rgb(216, 242, 255);
+}
+
+header {
+    margin-left: 10px;
+}
+
+h1, h2, h3, p, a, li, sub {
+    font-family: "SUSE Mono", sans-serif;
+    color: rgb(23, 88, 168);
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    max-width: 600px;
+    margin-left: 25px;
+}
+
+.graphic {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.graphic sub {
+    margin-left: 10px;
+}
+
