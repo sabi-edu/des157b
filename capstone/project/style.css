@@ -80,7 +80,7 @@ ul {
     font-size: 14px;
     display: block;
     margin: auto;
-    transition-duration: ;
+    transition-duration: .3s;
 }
 
 #watermark:hover {
