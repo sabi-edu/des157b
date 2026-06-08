@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We'll be okay.</title>
+    <script src="https://kit.fontawesome.com/74d06b2fdb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
@@ -12,53 +13,64 @@
 
 <body>
 
+    <header class="showing">
+        <p>Type a letter to a</p>
+        <p class="pink">a younger self.</p>
+    </header>
+
+    <nav>
+        <div id="info-btn" class="showing"><i class="fa-solid fa-question"></i></div>
+    </nav>
+    
     <section id="overlay" class="showing">
         <article>
-            <h1>Hello there :]</h1>
-            <p>Be sure to:</p>
+            <h1 class="pink">Hello there :]</h1>
+            <p id="landing-msg">This corner of the internet is for typing letters for our younger selves; wherever they may be :]</p>
+            
+            <p><u>Reminders:</u></p>
             <ul>
-                <li><em>Keep personal info anonymous</em></li>
-                <li><em>Take your time, there's no rush :]</em></li>
+                <li><em>To start/continue a letter, enter an email. <strong>Only you will see this.</strong></em></li>
+                <li><em>New messages appear at the <strong>top</strong> of previous letters.</em></li>
+                <li><em>To continue the community letter, leave the email field blank. <strong>Any who contribute can see this.</strong></em></li>
+                <li><em>Keep community messages cordial & anonymous, or <strong>they may disappear!</strong></em></li>
+                <li><em>Take your time... there's no rush :]</em></li>
             </ul>
-            <p>Thanks for being here!</p>
-            <button id="close-btn">Close</button>
+            <button id="close-btn">Onward!</button>
         </article>
     </section>
 
-    <p id="prompt">Send a message to a younger self.</p>
+    <img id="form-flower" class="showing" src="media/flower.png" alt="Pink flower">
     
-    <form>
-        <label for="email">Email</label>
-        <input type="email" id="email" class="data" required>
-        <label for="message">Message</label>
-        <textarea cols="50" rows="10" id="message"></textarea>
-        <input type="submit" value="send" id="submit-btn">
+    <form class="showing">
+
+        <p class="greeting"><em>Dear younger me,</em></p>
+        <textarea id="message" placeholder="Message" rows="10"></textarea>
+        <p class="signature"><em>Love,<br>Older you</em></p>
+
+        <input type="email" id="email" class="data" placeholder="Email">
+
+        <input type="submit" value="Send!" id="submit-btn">
+
     </form>
 
     <main class="hidden">
 
-        <section  id="letters">
+        <article>
+            <p class="greeting"><em>Dear younger me,</em></p>
+            <p id="letter"></p>
+            <p class="signature"><em>Love,<br>Older you</em></p>
+        </article>
 
-            <article>
-                <header><p id="greeting"><em>Dear younger me,</em></p></header>
-
-                <p></p>
-
-                <footer id="signature">
-                    <p><em>Love,</em></p>
-                    <p><em>Older you</em></p>
-                </footer>
-            </article>
-            
-        </section>
+        <button id="back-btn">Return for now ...</button>
 
     </main>
 
-    <img id="flower" class="hidden" src="media/flower.png" alt="Pink flower">
+    <img id="letter-flower1" class="hidden" src="media/flower.png" alt="Pink flower">
 
-    <footer>
-        <p><a href="https://sarcadass.github.io/granim.js/"><u>Granim</u> | </a></p>
-        <p><a href="https://jquery.com/"><u>JQuery</u></a></p>
+    <img id="letter-flower2" class="hidden" src="media/flower.png" alt="Pink flower">
+
+    <footer class="hidden">
+        <p><a href="https://jquery.com/">JQuery</a> | <a href="https://www.back4app.com/">back4app</a></p>
     </footer>
 
 </body>
