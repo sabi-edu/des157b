@@ -88,7 +88,7 @@ ul {
 }
 
 #info-btn:hover {
-    transform: scale(1.02);
+    transform: scale(2);
 }
 
 header {
@@ -107,10 +107,11 @@ header {
     z-index: -99;
     opacity: .3;
     rotate: 90deg;
+    transition-duration: .8s;
 }
 
 #form-flower:hover {
-    transform: scale(1.02);
+    transform: scale(1.2);
     opacity: .5;
 }
 
@@ -221,7 +222,7 @@ main article {
     z-index: -99;
     rotate: 180deg;
     opacity: .7;
-    transition-duration: .03s;
+    transition-duration: .8s;
 }
 
 #letter-flower1:hover {
@@ -236,7 +237,7 @@ main article {
     width: 50%;
     z-index: -99;
     opacity: .7;
-    transition-duration: .3s;
+    transition-duration: .8s;
 }
 
 #letter-flower2:hover {
@@ -265,6 +266,7 @@ footer {
 
 .pink {
     color: #fc72f5;
+    transition-duration: .8s;
 }
 
 .pink:hover {
