@@ -221,6 +221,7 @@ main article {
     z-index: -99;
     rotate: 180deg;
     opacity: .7;
+    transition-duration: .03s;
 }
 
 #letter-flower1:hover {
@@ -235,6 +236,7 @@ main article {
     width: 50%;
     z-index: -99;
     opacity: .7;
+    transition-duration: .3s;
 }
 
 #letter-flower2:hover {
