@@ -8,16 +8,16 @@
 /* ------ */
 
 body {
-    background-color: rgb(216, 242, 255);
+    background-color: #FFF6FF;
 }
 
 header {
     margin-left: 10px;
 }
 
-h1, h2, h3, p, a, li, sub {
+h1, h2, h3, p, a, li, sub, figcaption {
     font-family: "SUSE Mono", sans-serif;
-    color: rgb(23, 88, 168);
+    color: #e296e2;
 }
 
 h2 {
